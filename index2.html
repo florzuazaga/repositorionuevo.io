@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    
+    <link rel="stylesheet" href="./estilo.css" />
+    <title>Tienda de libros</title>
+  </head>
+  <body>
+    <!--tienda-->
+    <div class="page-nav">
+      <!--cartel-->
+      <h3>
+        Tienda de Libros
+        <span> Tienda de Libros</span>
+        <span> Tienda de Libros</span>
+        <span> books</span>
+      </h3>
+      <!--menu-->
+      <div class="buttons">
+        <button class="pulse">
+          <a href="#registrate" style="text-decoration: none">Registrate</a>
+        </button>
+        <button class="pulse">
+          <a href="#page-content" style="text-decoration: none">Tienda</a>
+        </button>
+        <button class="pulse">
+          <a href="#reseñas" style="text-decoration: none">Reseñas</a>
+        </button>
+      </div>
+      <button id="checkout" class="button-checkout" onclick="pay()">
+        Pagar
+      </button>
+    </div>
+    <div class="page-content" id="page-content">
+      <div class="product-container">
+        <h5>Bajo la misma estrella</h5>
+        <img src="./img/product1.jpg" alt="bajolamismaestrella" />
+        <h5>$4390</h5>
+        <button class="button-add" onclick="add('product1',4390)">
+          Agregar
+        </button>
+      </div>
+
+      <div class="product-container">
+        <h5>El amor en tiempo de colera</h5>
+        <img src="./img/product2.webp" alt="elamorentiempodecolera" />
+        <h5>$5890</h5>
+        <button class="button-add" onclick="add('product2',5890)">
+          Agregar
+        </button>
+      </div>
+
+      <div class="product-container">
+        <h5>Reina Roja</h5>
+        <img src="./img/product3.jpg" alt="reinaroja" />
+        <h5>$4900</h5>
+        <button class="button-add" onclick="add('product3',4900)">
+          Agregar
+        </button>
+      </div>
+
+      <div class="product-container">
+        <h5>Yo antes de ti</h5>
+        <img src="./img/product4.webp" alt="yoantesdeti" />
+        <h5>$7560</h5>
+        <button class="button-add" onclick="add('product4',7560)">
+          Agregar
+        </button>
+      </div>
+      <div class="product-container">
+        <h5>Eclipse</h5>
+        <img src="./img/product5.jpg" alt="eclipse" />
+        <h5>$7190</h5>
+        <button class="button-add" onclick="add('product5',7190)">
+          Agregar
+        </button>
+      </div>
+      <div class="product-container">
+        <h5>El Paciente</h5>
+        <img src="./img/product6.jpg" alt="elpaciente" />
+        <h5>$4580</h5>
+        <button class="button-add" onclick="add('product6',4580)">
+          Agregar
+        </button>
+      </div>
+    </div>
+    <!--reseñas-->
+    <div class="contenedor" id="reseñas">
+      <div class="contenedor_tarjeta">
+        <a href="#">
+          <figure id="tarjeta">
+            <img
+              src="./img/product1.jpg"
+              class="frontal"
+              alt="bajolamismaestrella"
+            />
+            <figcaption class="trasera">
+              <h2 class="titulo">Bajo la misma estrella</h2>
+              <hr />
+              <p>
+                Bajo la misma estrella trata temas como la muerte, el amor, la
+                amistad, el respeto, la tolerancia y la importancia de disfrutar
+                de la vida.
+              </p>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+      <div class="contenedor_tarjeta">
+        <a href="#">
+          <figure id="tarjeta">
+            <img
+              src="./img/product2.webp"
+              class="frontal"
+              alt="elamorentiempodecolera"
+            />
+            <figcaption class="trasera">
+              <h2 class="titulo">El amor en los tiempos de colera</h2>
+              <hr />
+              <p>
+                ​Es una novela dedicada al verdadero amor que perdura y supera
+                las adversidades toda una vida. <br />
+                Es un homenaje al amor, las aventuras, el tiempo, la vejez y la
+                muerte.​
+              </p>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+
+      <div class="contenedor_tarjeta">
+        <a href="#">
+          <figure id="tarjeta">
+            <img src="./img/product3.jpg" class="frontal" alt="reinaroja" />
+            <figcaption class="trasera">
+              <h2 class="titulo">Reina Roja</h2>
+              <hr />
+              <p>
+                Un homicidio, un secuestro y un proyecto que intentará
+                resolverlo antes de que sea demasiado tarde.
+              </p>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+      <div class="contenedor_tarjeta">
+        <a href="#">
+          <figure id="tarjeta">
+            <img src="./img/product4.webp" class="frontal" alt="yoantesdeti" />
+            <figcaption class="trasera">
+              <h2 class="titulo">Yo antes de ti</h2>
+              <hr />
+              <p>
+                Yo antes de ti reúne a dos personas que no podrían tener menos
+                en común en una novela conmovedoramente romántica con una
+                pregunta:<br />
+                ¿Qué decidirías cuando hacer feliz a la persona a la que amas
+                significa también destrozarte el corazón?
+              </p>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+      <div class="contenedor_tarjeta">
+        <a href="#">
+          <figure id="tarjeta">
+            <img src="./img/product5.jpg" class="frontal" alt="eclipse" />
+            <figcaption class="trasera">
+              <h2 class="titulo">Eclipse</h2>
+              <hr />
+              <p>
+                Un cóctel de violencia, intriga afilada y criminales
+                especialmente inquietantes.
+              </p>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+
+      <div class="contenedor_tarjeta">
+        <a href="#">
+          <figure id="tarjeta">
+            <img src="./img/product6.jpg" class="frontal" alt="elpaciente" />
+            <figcaption class="trasera">
+              <h2 class="titulo">El paciente</h2>
+              <hr />
+              <p>
+                Una novela apasionante, emotiva e inquietante, que se desarrolla
+                <br />
+                en 63 frenéticas horas, que no da respiro en su lectura <br />
+                y que plantea un dilema moral imposible que puede cambiar el
+                <br />
+                curso de la Historia.
+              </p>
+            </figcaption>
+          </figure>
+        </a>
+      </div>
+    </div>
+    <!--suscripcion-->
+    <div class="noise"></div>
+    <h1 id="registrate">Registrate</h1>
+    <form
+      action="https://formsubmit.co/florenciazuazaga47@gmail.com"
+      method="post"
+      class="form-register"
+    >
+      <h2 class="form__titulo">Crea una Cuenta</h2>
+      <div class="contenedor-inputs">
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="nombre"
+          class="input-48"
+          required
+        />
+        <input
+          type="text"
+          id="apellidos"
+          name="apellidos"
+          placeholder="apellidos"
+          class="input-48"
+          required
+        />
+        <input
+          type="email"
+          id="correo"
+          name="correo"
+          placeholder="correo"
+          class="input-100"
+          required
+        />
+        <input
+          type="text"
+          id="usuario"
+          name="usuario"
+          placeholder="usuario"
+          class="input-48"
+          required
+        />
+        <input
+          type="password"
+          id="clave"
+          name="clave"
+          placeholder="contraseña"
+          class="input-48"
+          required
+        />
+        <input
+          type="text"
+          id="telefono"
+          name="telefono"
+          placeholder="telefono"
+          class="input-100"
+          required
+        />
+        <input type="submit" value="Registrar" class="btn-enviar" />
+        <p class="form__link">
+          ¿Ya tienes una cuenta? <a href="#">Ingresa aquí</a>
+        </p>
+      </div>
+      <a href="mailto:florenciazuazaga47@gmail.com" id="mail">mail</a>
+    </form>
+    <footer>
+      <div class="mediosdePago">
+        <h6>Medios de pago</h6>
+        <img src="./img/mediosdepago.png" alt="mediosdepago" />
+        <p class="text">
+          Copyright © 1995-2023 <br />
+          Tienda de Libros S.A.<br />
+          TODOS LOS DERECHOS RESERVADOS.<br />
+          TACUARÍ 1842 (C1139AAN) CABA <br />
+          CUIT Nº: 30-53909781-0
+        </p>
+        <div class="datafiscal">
+          <img src="./img/cuspide-DATAWEB.jpg" alt="datafiscal" />
+          <img src="./img/datafiscal2.jpg" alt="datafiscal2" />
+        </div>
+      </div>
+    </footer>
+    <script src="app.js"></script>
+  </body>
+</html>
